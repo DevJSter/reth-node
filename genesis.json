@@ -1,0 +1,22 @@
+{
+    "name": "MyPrivateChain",
+    "chainId": 93233,
+    "genesis": {
+      "timestamp": "0x0",
+      "difficulty": "0x1",
+      "gasLimit": "0x1fffffffffffff",
+      "baseFeePerGas": "0x0"
+    },
+    "params": {
+      "homesteadBlock": 0,
+      "eip150Block": 0,
+      "eip155Block": 0,
+      "eip158Block": 0
+    },
+    "alloc": {
+      "E2b39f4cfFA5B17434e47Ab5F54b984155e4b7aD": {
+        "balance": "1000000000000000000000"
+      }
+    }
+  }
+  
