@@ -8,7 +8,7 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-brew install curl coreutils openssl pkg-config
+brew install go curl git jq cmake pkg-config openssl
 
 # Install Foundry tools for Ethereum development
 echo "Installing Foundry..."
@@ -16,18 +16,110 @@ curl -L https://foundry.paradigm.xyz | bash
 source ~/.bashrc 2>/dev/null || source ~/.bash_profile 2>/dev/null || source ~/.zshrc 2>/dev/null
 ~/.foundry/bin/foundryup
 
-# Install Rust if not already installed
-if ! command -v rustup &> /dev/null; then
-    echo "Installing Rust toolchain..."
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.81.0
-    source "$HOME/.cargo/env"
+# Add Foundry to PATH for this session
+export PATH="$HOME/.foundry/bin:$PATH"
+
+# Configure Go environment
+echo "Configuring Go environment..."
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# Clone nitro repository if it doesn't exist
+if [ ! -d "./nitro" ]; then
+    echo "Cloning Nitro repository..."
+    git clone https://github.com/OffchainLabs/nitro.git
+    cd nitro
+    git checkout v3.5.5 # Use the main version tag
+    # The exact hash from your Docker script is 90ee45c
+    git submodule update --init --recursive
+    cd ..
 fi
 
-# Add WASM targets for Stylus development
-rustup target add wasm32-unknown-unknown wasm32-wasi
+# Check if config.json exists
+if [ ! -f "./config.json" ]; then
+    echo "Creating config.json file..."
+    cat > config.json << 'EOL'
+{
+   "chain": {
+     "id": 42161000,
+     "name": "MyArbitrumChain"
+   },
+   "http": {
+     "addr": "0.0.0.0",
+     "port": 8547,
+     "api": ["net", "web3", "eth", "debug", "arb"]
+   },
+   "execution": {
+     "sequencer": {
+       "enable": true,
+       "dangerous": {
+         "no-coordinator": true
+       }
+     }
+   },
+   "init": {
+     "preimagedir": "./preimages"
+   },
+   "parent-chain": {
+     "connection": {
+       "url": "http://localhost:8545"
+     }
+   }
+}
+EOL
+    echo "Created default config.json"
+else
+    echo "config.json already exists, keeping your current file"
+fi
 
-# Install cargo-stylus
-echo "Installing cargo-stylus..."
-cargo install --force cargo-stylus
+# Install Rust and tools for Stylus support
+echo "Would you like to install Rust and Stylus support? (y/n)"
+read -r install_stylus
 
-echo "Setup complete! You can now run ./run-nitro-local-macos.sh to start your local Nitro node."
+if [[ "$install_stylus" == "y" || "$install_stylus" == "Y" ]]; then
+    # Install Rust if not already installed
+    if ! command -v rustup &> /dev/null; then
+        echo "Installing Rust toolchain..."
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.81.0
+        source "$HOME/.cargo/env"
+    fi
+
+    # Add WASM targets for Stylus development
+    rustup target add wasm32-unknown-unknown wasm32-wasi
+
+    # Install cargo-stylus
+    echo "Installing cargo-stylus..."
+    cargo install --force cargo-stylus
+    
+    echo "Stylus support has been installed"
+fi
+
+# Build the Nitro node
+echo "Building Nitro node from source..."
+cd nitro
+make build
+cd ..
+
+# Create the required directories
+mkdir -p ./nitro-datadir
+mkdir -p ./preimages
+
+# Create an empty stylus-deployer-bytecode.txt file for Stylus mode
+if [ ! -f "./stylus-deployer-bytecode.txt" ]; then
+    echo "Creating stylus-deployer-bytecode.txt file..."
+    echo "0x608060405234801561001057600080fd5b50610150806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80633d8b6ec41461003b578063fb0e4974146100be575b600080fd5b6100a8610049366046610112565b806000825b600a81101561008e5761007d6040518060600160405280602f81526020016100f1602f9139610125565b159150600101610051565b50806005036000557f5a04311af0b10a161dafd816a9c19b86c55ef5a24eed03a91587a328a74a6e6a81604051610087919061013b565b60405180910390a25050565b6100d16100cc366046610112565b90565b60405190815260200161008f565b634e487b7160e01e600052604160045260246000fd5b60006020828403121561012457600080fd5b5035919050565b60008151116002565b602081526000825180602084015261015a816040850160208701610125565b601f01601f1916919091016040019291505056fe" > stylus-deployer-bytecode.txt
+fi
+
+# Verify the build
+if [ -f "./nitro/target/bin/nitro" ]; then
+    echo "Nitro node built successfully!"
+else
+    echo "Failed to build Nitro node. Please check the logs above for errors."
+    exit 1
+fi
+
+echo ""
+echo "Setup complete! Next steps:"
+echo "1. Review the config.json file if you want to customize your Nitro node"
+echo "2. Run ./run-nitro.sh to start your local Nitro node"
+echo "3. Run ./run-nitro.sh --stylus to start with Stylus support"
