@@ -15,9 +15,10 @@ echo "$header_base64.$payload_base64.$signature"
 ```
 
 ## jwt token
-```jwt_key
 
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiAxNzQ3MDUwMTQ4fQ.8NZGWnUJ4n4G4lPVC659z6oVPcCOwVShbbj1CszHtG4
+
+```jwt_key
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiAxNzQ3MDU0MTgzLCAiZXhwIjogNDkwMjcyNzc4M30.4cIrO3f4jRk6KhL1bPsvQ3Qu1JfQrL4wD2D2BJeWxWQ
 ```
 
 ## check if node is running or not 
