@@ -1,4 +1,6 @@
-reth node --config reth-config.toml
+reth node --config reth-config.toml -vvvvv
+
+Add as many as v for more verbosity ggs
 
 
 ## Create the jwt token
