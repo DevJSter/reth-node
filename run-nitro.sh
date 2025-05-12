@@ -11,10 +11,8 @@ SALT=0x0000000000000000000000000000000000000000000000000000000000000000
 # Check if the nitro repository is already cloned
 if [ ! -d "./nitro" ]; then
     echo "Cloning Nitro repository..."
-    git clone https://github.com/OffchainLabs/nitro.git
+    git clone --branch $NITRO_NODE_VERSION https://github.com/OffchainLabs/nitro.git
     cd nitro
-    git checkout v3.5.5 # Use the main version tag
-    # The exact hash from your Docker script is 90ee45c
     git submodule update --init --recursive
     cd ..
 fi

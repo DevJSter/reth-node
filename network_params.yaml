@@ -7,14 +7,3 @@ participants:
     el_image: ghcr.io/paradigmxyz/reth
     cl_type: teku
     cl_image: consensys/teku:latest
-
-network_params:
-  network_id: "585858"
-  num_validator_keys_per_node: 64
-
-# Optional additional services
-additional_services:
-  # Use tx_fuzz instead of tx_spammer
-  - tx_fuzz
-  # Enable metrics collection
-  - prometheus_grafana

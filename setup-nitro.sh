@@ -8,7 +8,14 @@ fi
 
 # Install dependencies
 echo "Installing dependencies..."
-brew install go curl git jq cmake pkg-config openssl
+brew install go curl git jq cmake pkg-config openssl autoconf automake libtool
+
+# Make sure CMake is at least version 3.5
+CMAKE_VERSION=$(cmake --version | head -n1 | awk '{print $3}')
+if [ "$(echo "$CMAKE_VERSION" | awk -F. '{print $1*10000+$2*100+$3}')" -lt 30500 ]; then
+    echo "CMake version $CMAKE_VERSION is too old, upgrading..."
+    brew upgrade cmake
+fi
 
 # Install Foundry tools for Ethereum development
 echo "Installing Foundry..."
@@ -85,7 +92,17 @@ if [[ "$install_stylus" == "y" || "$install_stylus" == "Y" ]]; then
     fi
 
     # Add WASM targets for Stylus development
-    rustup target add wasm32-unknown-unknown wasm32-wasi
+    echo "Adding WASM targets..."
+    rustup target add wasm32-unknown-unknown
+    
+    # Check if we're on Apple Silicon (arm64)
+    if [[ $(uname -m) == "arm64" ]]; then
+        echo "Detected Apple Silicon (ARM64), using wasm32-wasip1 target"
+        rustup target add wasm32-wasip1
+    else
+        echo "Using wasm32-wasi target"
+        rustup target add wasm32-wasi
+    fi
 
     # Install cargo-stylus
     echo "Installing cargo-stylus..."
@@ -97,6 +114,14 @@ fi
 # Build the Nitro node
 echo "Building Nitro node from source..."
 cd nitro
+
+# Fix CMake version issue in brotli
+BROTLI_CMAKE_FILE="third_party/brotli/CMakeLists.txt"
+if [ -f "$BROTLI_CMAKE_FILE" ]; then
+    echo "Fixing CMake version requirement in Brotli..."
+    sed -i.bak 's/cmake_minimum_required(VERSION 2.8.12)/cmake_minimum_required(VERSION 3.5)/' "$BROTLI_CMAKE_FILE"
+fi
+
 make build
 cd ..
 
