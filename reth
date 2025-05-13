@@ -1,24 +1,3 @@
-[chain]
-id = 42161000
-name = "MyArbitrumChain"
-
-[http]
-addr = "0.0.0.0"
-port = 8547
-api = ["net", "web3", "eth", "debug", "arb"]
-jwt-secret = "./jwt.hex"
-
-[execution.sequencer]
-enable = true
-
-[execution.sequencer.dangerous]
-no-coordinator = true
-[init]
-preimagedir = "./preimages"
-
-[parent-chain.connection]
-url = "http://localhost:8545"
-
 [stages.headers]
 downloader_max_concurrent_requests = 100
 downloader_min_concurrent_requests = 5
@@ -67,11 +46,6 @@ commit_threshold = 100000
 
 [stages.etl]
 file_size = 524288000
-
-[prune]
-block_interval = 5
-
-[prune.segments.receipts_log_filter]
 
 [peers]
 refill_slots_interval = "5s"

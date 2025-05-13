@@ -140,7 +140,7 @@ if [ -f "./nitro/target/bin/nitro" ]; then
     echo "Nitro node built successfully!"
 else
     echo "Failed to build Nitro node. Please check the logs above for errors."
-    exit 1
+    exit 1  
 fi
 
 echo ""
