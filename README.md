@@ -1,5 +1,14 @@
-reth node --config reth-config.toml -vvvvv
+## Initializing the db and stuff
 
+```json
+reth init --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --chain config.json
+```
+
+## Running the node
+
+```bash
+reth node --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --http --ws --port 30303 --http.api all --chain config.json
+```
 Add as many as v for more verbosity ggs
 
 
