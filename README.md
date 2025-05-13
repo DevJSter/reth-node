@@ -44,3 +44,15 @@ curl -X POST http://localhost:8551 \
     "id":1
   }' 
 ```
+
+## To get the chain id 
+
+```bash
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" localhost:8545
+```
+
+## To get the Eth parent hash 
+
+```bash
+curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x0", false],"id":1}' http://127.0.0.1:8545
+```
