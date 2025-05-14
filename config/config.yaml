@@ -1,0 +1,195 @@
+# Custom Chain config
+
+# Extends the mainnet preset
+PRESET_BASE: 'mainnet'
+
+# Free-form short name of the network that this configuration applies to
+# Custom chain with chainId 12345
+CONFIG_NAME: 'custom-chain-12345'
+
+# Transition
+# ---------------------------------------------------------------
+# Since your chain starts with merge (mergeForkBlock: 0), we set this to 0
+TERMINAL_TOTAL_DIFFICULTY: 1
+# By default, don't use these params
+TERMINAL_BLOCK_HASH: 0x0000000000000000000000000000000000000000000000000000000000000000
+TERMINAL_BLOCK_HASH_ACTIVATION_EPOCH: 0
+
+# Genesis
+# ---------------------------------------------------------------
+# 2**5 (= 32) for a smaller custom chain
+MIN_GENESIS_ACTIVE_VALIDATOR_COUNT: 32
+# Set to timestamp 0 as your genesis timestamp
+MIN_GENESIS_TIME: 0
+# Custom initial fork version
+GENESIS_FORK_VERSION: 0x00012345
+# No delay for custom chain
+GENESIS_DELAY: 0
+
+# Forking
+# ---------------------------------------------------------------
+# Since your chain starts with all forks enabled, we set epochs to 0
+
+# Altair
+ALTAIR_FORK_VERSION: 0x01012345
+ALTAIR_FORK_EPOCH: 0
+# Bellatrix (The Merge)
+BELLATRIX_FORK_VERSION: 0x02012345
+BELLATRIX_FORK_EPOCH: 0
+# Capella
+CAPELLA_FORK_VERSION: 0x03012345
+CAPELLA_FORK_EPOCH: 0
+# Deneb
+DENEB_FORK_VERSION: 0x04012345
+DENEB_FORK_EPOCH: 0
+# Electra
+ELECTRA_FORK_VERSION: 0x05012345
+ELECTRA_FORK_EPOCH: 0
+# Fulu (disabled for now)
+FULU_FORK_VERSION: 0x06012345
+FULU_FORK_EPOCH: 18446744073709551615  # temporary stub
+# EIP7441 (disabled)
+EIP7441_FORK_VERSION: 0x08012345
+EIP7441_FORK_EPOCH: 18446744073709551615
+# EIP7732 (disabled)
+EIP7732_FORK_VERSION: 0x09012345
+EIP7732_FORK_EPOCH: 18446744073709551615
+# EIP7805 (disabled)
+EIP7805_FORK_VERSION: 0x0a012345
+EIP7805_FORK_EPOCH: 18446744073709551615
+
+# Time parameters
+# ---------------------------------------------------------------
+# 12 seconds
+SECONDS_PER_SLOT: 12
+# 14 (estimate from Eth1 mainnet)
+SECONDS_PER_ETH1_BLOCK: 14
+# 2**8 (= 256) epochs, ~27 hours
+MIN_VALIDATOR_WITHDRAWABILITY_DELAY: 256
+# 2**8 (= 256) epochs, ~27 hours
+SHARD_COMMITTEE_PERIOD: 256
+# 2**11 (= 2,048) Eth1 blocks, ~8 hours
+ETH1_FOLLOW_DISTANCE: 2048
+
+# Validator cycle
+# ---------------------------------------------------------------
+# 2**2 (= 4)
+INACTIVITY_SCORE_BIAS: 4
+# 2**4 (= 16)
+INACTIVITY_SCORE_RECOVERY_RATE: 16
+# 2**4 * 10**9 (= 16,000,000,000) Gwei
+EJECTION_BALANCE: 16000000000
+# 2**2 (= 4) validators
+MIN_PER_EPOCH_CHURN_LIMIT: 4
+# 2**16 (= 65,536)
+CHURN_LIMIT_QUOTIENT: 65536
+# [New in Deneb:EIP7514] 2**3 (= 8)
+MAX_PER_EPOCH_ACTIVATION_CHURN_LIMIT: 8
+
+# Fork choice
+# ---------------------------------------------------------------
+# 40%
+PROPOSER_SCORE_BOOST: 40
+# 20%
+REORG_HEAD_WEIGHT_THRESHOLD: 20
+# 160%
+REORG_PARENT_WEIGHT_THRESHOLD: 160
+# 2 epochs
+REORG_MAX_EPOCHS_SINCE_FINALIZATION: 2
+
+# Deposit contract
+# ---------------------------------------------------------------
+# Your custom chain ID
+DEPOSIT_CHAIN_ID: 12345
+DEPOSIT_NETWORK_ID: 12345
+# You'll need to deploy a deposit contract and set its address here
+# Using a placeholder address - replace with actual deployed contract
+DEPOSIT_CONTRACT_ADDRESS: 0x0000000000000000000000000000000000000001
+
+# Networking
+# ---------------------------------------------------------------
+# 10 * 2**20 (= 10,485,760) bytes, 10 MiB
+MAX_PAYLOAD_SIZE: 10485760
+# 2**10 (= 1,024) blocks
+MAX_REQUEST_BLOCKS: 1024
+# 2**8 (= 256) epochs
+EPOCHS_PER_SUBNET_SUBSCRIPTION: 256
+# `MIN_VALIDATOR_WITHDRAWABILITY_DELAY + CHURN_LIMIT_QUOTIENT // 2` (= 33,024) epochs, ~5 months
+MIN_EPOCHS_FOR_BLOCK_REQUESTS: 33024
+# 5s
+TTFB_TIMEOUT: 5
+# 10s
+RESP_TIMEOUT: 10
+ATTESTATION_PROPAGATION_SLOT_RANGE: 32
+# 500ms
+MAXIMUM_GOSSIP_CLOCK_DISPARITY: 500
+MESSAGE_DOMAIN_INVALID_SNAPPY: 0x00000000
+MESSAGE_DOMAIN_VALID_SNAPPY: 0x01000000
+# 2 subnets per node
+SUBNETS_PER_NODE: 2
+# 2**8 (= 64)
+ATTESTATION_SUBNET_COUNT: 64
+# 0 bits
+ATTESTATION_SUBNET_EXTRA_BITS: 0
+# ceillog2(ATTESTATION_SUBNET_COUNT) + ATTESTATION_SUBNET_EXTRA_BITS (= 6 + 0) bits
+ATTESTATION_SUBNET_PREFIX_BITS: 6
+
+# Deneb
+# 2**7 (= 128) blocks
+MAX_REQUEST_BLOCKS_DENEB: 128
+# 2**12 (= 4,096) epochs, ~18 days
+MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS: 4096
+# 6 subnets
+BLOB_SIDECAR_SUBNET_COUNT: 6
+# 6 blobs
+MAX_BLOBS_PER_BLOCK: 6
+# MAX_REQUEST_BLOCKS_DENEB * MAX_BLOBS_PER_BLOCK (= 128 * 6) sidecars
+MAX_REQUEST_BLOB_SIDECARS: 768
+
+# Electra
+# 2**7 * 10**9 (= 128,000,000,000) Gwei
+MIN_PER_EPOCH_CHURN_LIMIT_ELECTRA: 128000000000
+# 2**8 * 10**9 (= 256,000,000,000) Gwei
+MAX_PER_EPOCH_ACTIVATION_EXIT_CHURN_LIMIT: 256000000000
+# 9 subnets
+BLOB_SIDECAR_SUBNET_COUNT_ELECTRA: 9
+# 9 blobs
+MAX_BLOBS_PER_BLOCK_ELECTRA: 9
+# MAX_REQUEST_BLOCKS_DENEB * MAX_BLOBS_PER_BLOCK_ELECTRA (= 128 * 9) sidecars
+MAX_REQUEST_BLOB_SIDECARS_ELECTRA: 1152
+
+# Fulu
+NUMBER_OF_COLUMNS: 128
+NUMBER_OF_CUSTODY_GROUPS: 128
+DATA_COLUMN_SIDECAR_SUBNET_COUNT: 128
+MAX_REQUEST_DATA_COLUMN_SIDECARS: 16384
+SAMPLES_PER_SLOT: 8
+CUSTODY_REQUIREMENT: 4
+VALIDATOR_CUSTODY_REQUIREMENT: 8
+BALANCE_PER_ADDITIONAL_CUSTODY_GROUP: 32000000000
+MIN_EPOCHS_FOR_DATA_COLUMN_SIDECARS_REQUESTS: 4096
+
+# EIP7441
+EPOCHS_PER_SHUFFLING_PHASE: 256
+PROPOSER_SELECTION_GAP: 2
+
+# EIP7732
+MAX_REQUEST_PAYLOADS: 128
+PROPOSER_SCORE_BOOST_EIP7732: 20
+
+# EIP7805
+ATTESTATION_DEADLINE: 4
+PROPOSER_INCLUSION_LIST_CUT_OFF: 11
+VIEW_FREEZE_DEADLINE: 9
+# 2**4 (= 16)
+MAX_REQUEST_INCLUSION_LIST: 16
+# 2**13 (= 8192)
+MAX_BYTES_PER_INCLUSION_LIST: 8192
+
+# Blob Scheduling
+# ---------------------------------------------------------------
+
+BLOB_SCHEDULE:
+  # Since all forks are at epoch 0, we start with max blobs
+  - EPOCH: 0
+    MAX_BLOBS_PER_BLOCK: 9

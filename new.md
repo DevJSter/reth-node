@@ -219,3 +219,7 @@ You may combine scripts or add flags (e.g. for separate sequencer/validator proc
 * Nitro Core Contracts (for manual deployments) (see *canonical factory contracts* in Arbitrum docs if needed)
 
 Feel free to adjust versions, ports, or use alternate installation methods. With these steps, you’ll have a fully local Arbitrum Nitro testnet with Reth/Lighthouse L1, and your own L2 sequencer and validator.
+
+
+
+https://sepolia.beaconstate.info

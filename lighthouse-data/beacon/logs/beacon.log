@@ -1,0 +1,119 @@
+May 14 09:31:03.329 INFO Logging to file, path: "./lighthouse-data/beacon/logs/beacon.log", module: environment:311
+May 14 09:31:03.333 INFO Lighthouse started, version: Lighthouse/v7.0.1-e42406d, module: lighthouse:721
+May 14 09:31:03.333 INFO Configured for network, name: custom (./config), module: lighthouse:722
+May 14 09:31:03.340 INFO Data directory initialised, datadir: ./lighthouse-data, module: beacon_node::config:108
+May 14 09:31:03.341 WARN Discv5 packet filter is disabled, module: beacon_node::config:1458
+May 14 09:31:03.346 INFO Deposit contract, address: 0x0000000000000000000000000000000000000001, deploy_block: 0, module: beacon_node::config:527
+May 14 09:31:03.355 CRIT Failed to start beacon node, reason: Built-in genesis state SSZ bytes are invalid: InvalidByteLength { len: 521, expected: 262320 }, module: lighthouse:762
+May 14 09:31:03.355 INFO Internal shutdown received, reason: Failed to start beacon node, module: environment:470
+May 14 09:31:03.355 INFO Shutting down.., reason: Failure("Failed to start beacon node"), module: lighthouse:784
+May 14 09:34:36.853 INFO Logging to file, path: "./lighthouse-data/beacon/logs/beacon.log", module: environment:311
+May 14 09:34:36.857 INFO Lighthouse started, version: Lighthouse/v7.0.1-e42406d, module: lighthouse:721
+May 14 09:34:36.857 INFO Configured for network, name: custom (./config), module: lighthouse:722
+May 14 09:34:36.864 INFO Data directory initialised, datadir: ./lighthouse-data, module: beacon_node::config:108
+May 14 09:34:36.865 WARN Discv5 packet filter is disabled, module: beacon_node::config:1458
+May 14 09:34:36.870 INFO Deposit contract, address: 0x0000000000000000000000000000000000000001, deploy_block: 0, module: beacon_node::config:527
+May 14 09:34:36.933 INFO Blob DB initialized, oldest_data_column_slot: None, oldest_blob_slot: Some(Slot(0)), path: "./lighthouse-data/beacon/blobs_db", service: freezer_db, module: store::hot_cold_store:360
+May 14 09:34:36.934 DEBG Loaded execution endpoint, jwt_path: "./data/jwt.hex", endpoint: http://localhost:8551/, service: exec, module: execution_layer:521
+May 14 09:34:38.649 INFO Waiting for eth2 genesis from eth1, deposit_contract: 0x0000000000000000000000000000000000000001, contract_deploy_block: 0, eth1_endpoints: Auth { endpoint: "http://localhost:8551/", jwt_path: "./data/jwt.hex", jwt_id: None, jwt_version: None }, service: beacon, module: client::builder:543
+May 14 09:34:38.909 INFO HTTP API started, listen_address: 0.0.0.0:5052, service: beacon, module: http_api:5046
+May 14 09:34:38.909 INFO Importing eth1 deposit logs, service: beacon, module: genesis::eth1_genesis_service:111
+May 14 09:34:38.935 DEBG Imported deposit logs chunk, logs: 0, service: beacon, module: eth1::service:949
+May 14 09:34:38.935 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:34:38.935 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:34:45.939 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:34:45.939 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:34:52.941 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:34:52.942 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:34:59.945 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:34:59.945 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:06.947 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:06.947 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:13.950 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:13.950 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:20.953 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:20.953 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:27.955 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:27.956 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:34.959 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:34.959 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:41.962 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:41.962 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:48.965 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:48.965 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:35:55.968 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:35:55.968 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:02.971 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:02.971 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:09.974 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:09.975 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:16.977 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:16.977 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:23.979 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:23.980 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:30.982 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:30.982 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:37.985 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:37.985 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:44.988 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:44.988 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:51.991 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:51.991 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:36:58.997 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:36:58.998 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:06.000 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:06.001 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:13.004 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:13.004 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:20.006 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:20.006 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:27.008 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:27.008 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:34.010 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:34.010 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:41.013 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:41.013 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:48.015 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:48.015 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:37:55.017 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:37:55.018 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:02.020 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:02.020 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:09.022 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:09.022 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:16.025 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:16.025 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:23.028 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:23.028 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:30.030 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:30.031 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:37.032 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:37.032 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:44.035 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:44.035 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:51.038 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:51.038 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:38:58.043 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:38:58.043 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:05.045 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:05.045 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:12.047 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:12.047 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:19.051 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:19.051 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:26.055 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:26.055 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:33.056 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:33.056 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:40.060 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:40.060 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:47.061 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:47.061 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:39:54.064 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:39:54.065 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:40:01.067 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:40:01.067 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:40:08.071 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:40:08.071 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
+May 14 09:40:15.074 DEBG No new deposits found, total_deposits: 0, latest_block: 0, service: beacon, module: eth1::service:973
+May 14 09:40:15.074 INFO Waiting for more deposits, valid_deposits: None, total_deposits: 0, min_genesis_active_validators: 32, service: beacon, module: genesis::eth1_genesis_service:145
