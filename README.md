@@ -1,6 +1,6 @@
 ## Initializing the db and stuff
 
-```json
+```bash
 reth init --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --chain config.json
 ```
 
