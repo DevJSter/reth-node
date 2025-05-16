@@ -58,6 +58,20 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}
 curl -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":["0x0", false],"id":1}' http://127.0.0.1:8545
 ```
 
+Generate your validator keys using the [Ethereum Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli?tab=readme-ov-file#tutorial-for-users).
+
+
+then place it here in same dir and run 
+
+```bash
+lighthouse account validator import --directory validator_keys
+```
+
+what it will do it will !!
+
+```bash
+Successfully imported 3 validators (0 skipped).
+```
 
 ## Running Consensus client - Lighthouse 
 
@@ -74,4 +88,13 @@ lighthouse beacon_node \
   --http-address 0.0.0.0 \
   --disable-upnp \
   --disable-deposit-contract-sync
-  ```
+```
+
+## Generate the genesis state of the chain using this command and 
+
+
+this config.yaml is config for our consensus client 
+
+```bash
+eth2-testnet-genesis capella --config=config.yaml --eth1-config="config.json" --mnemonics=mnemonics.yaml --shadow-fork-eth1-rpc=http://localhost:8545
+```
