@@ -7,10 +7,10 @@ reth init --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --chain config
 ## Running the node
 
 ```bash
-reth node --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --http --ws --port 30303 --http.api all --chain config.json
+**reth node --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --http --ws --port 30303 --http.api all --chain config.json**
 ```
 
-Add as many as v for more verbosity ggs
+Add as many as v for more verbosity **ggs**
 
 
 ## Create the jwt token
@@ -49,7 +49,7 @@ curl -X POST http://localhost:8551 \
 ## To get the chain id 
 
 ```bash
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" localhost:8545
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" localhost:8545 }
 ```
 
 ## To get the Eth parent hash 

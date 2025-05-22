@@ -1,0 +1,52 @@
+May 19 05:49:06.996 INFO Logging to file, path: "./lighthouse_data/beacon/logs/beacon.log", module: environment:311
+May 19 05:49:06.998 INFO Lighthouse started, version: Lighthouse/v6.0.1, module: lighthouse:680
+May 19 05:49:06.998 INFO Configured for network, name: custom (./config), module: lighthouse:681
+May 19 05:49:07.007 INFO You are about to delete the chain database. This is irreversable and you will need to resync the chain., module: beacon_node::config:66
+May 19 05:49:07.007 INFO Type 'confirm' to delete the database. Any other input will leave the database intact and Lighthouse will exit., module: beacon_node::config:71
+May 19 05:49:12.197 INFO Database was deleted., module: beacon_node::config:83
+May 19 05:49:12.197 INFO Data directory initialised, datadir: ./lighthouse_data, module: beacon_node::config:107
+May 19 05:49:12.197 WARN Discv5 packet filter is disabled, module: beacon_node::config:1382
+May 19 05:49:12.211 INFO Deposit contract, address: 0x7f02c3e3c98b133055b8b348b2ac625669ed295d, deploy_block: 1, module: beacon_node::config:500
+May 19 05:49:12.222 WARN Fork boundaries are not well aligned / multiples of 256, misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))], info: This may cause issues as fork boundaries do not align with the start of sync committee period., module: beacon_node:76
+May 19 05:49:12.225 CRIT Failed to start beacon node, reason: Built-in genesis state SSZ bytes are invalid: OffsetSkipsVariableBytes(2736713), module: lighthouse:721
+May 19 05:49:12.225 INFO Internal shutdown received, reason: Failed to start beacon node, module: environment:470
+May 19 05:49:12.225 INFO Shutting down.., reason: Failure("Failed to start beacon node"), module: lighthouse:772
+May 19 05:53:02.977 INFO Logging to file, path: "./lighthouse_data/beacon/logs/beacon.log", module: environment:311
+May 19 05:53:02.980 INFO Lighthouse started, version: Lighthouse/v6.0.1, module: lighthouse:680
+May 19 05:53:02.980 INFO Configured for network, name: custom (./config), module: lighthouse:681
+May 19 05:53:02.988 INFO You are about to delete the chain database. This is irreversable and you will need to resync the chain., module: beacon_node::config:66
+May 19 05:53:02.988 INFO Type 'confirm' to delete the database. Any other input will leave the database intact and Lighthouse will exit., module: beacon_node::config:71
+May 19 05:53:08.637 INFO Database was deleted., module: beacon_node::config:83
+May 19 05:53:08.637 INFO Data directory initialised, datadir: ./lighthouse_data, module: beacon_node::config:107
+May 19 05:53:08.637 WARN Discv5 packet filter is disabled, module: beacon_node::config:1382
+May 19 05:53:08.652 INFO Deposit contract, address: 0x7f02c3e3c98b133055b8b348b2ac625669ed295d, deploy_block: 1, module: beacon_node::config:500
+May 19 05:53:08.662 WARN Fork boundaries are not well aligned / multiples of 256, misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))], info: This may cause issues as fork boundaries do not align with the start of sync committee period., module: beacon_node:76
+May 19 05:53:08.665 CRIT Failed to start beacon node, reason: Built-in genesis state SSZ bytes are invalid: OffsetSkipsVariableBytes(2736713), module: lighthouse:721
+May 19 05:53:08.665 INFO Internal shutdown received, reason: Failed to start beacon node, module: environment:470
+May 19 05:53:08.665 INFO Shutting down.., reason: Failure("Failed to start beacon node"), module: lighthouse:772
+May 19 05:57:37.656 INFO Logging to file, path: "./lighthouse_data/beacon/logs/beacon.log", module: environment:311
+May 19 05:57:37.659 INFO Lighthouse started, version: Lighthouse/v6.0.1, module: lighthouse:680
+May 19 05:57:37.659 INFO Configured for network, name: custom (./config), module: lighthouse:681
+May 19 05:57:37.667 INFO You are about to delete the chain database. This is irreversable and you will need to resync the chain., module: beacon_node::config:66
+May 19 05:57:37.667 INFO Type 'confirm' to delete the database. Any other input will leave the database intact and Lighthouse will exit., module: beacon_node::config:71
+May 19 05:57:42.618 INFO Database was deleted., module: beacon_node::config:83
+May 19 05:57:42.618 INFO Data directory initialised, datadir: ./lighthouse_data, module: beacon_node::config:107
+May 19 05:57:42.618 WARN Discv5 packet filter is disabled, module: beacon_node::config:1382
+May 19 05:57:42.631 INFO Deposit contract, address: 0x7f02c3e3c98b133055b8b348b2ac625669ed295d, deploy_block: 1, module: beacon_node::config:500
+May 19 05:57:42.638 WARN Fork boundaries are not well aligned / multiples of 256, misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))], info: This may cause issues as fork boundaries do not align with the start of sync committee period., module: beacon_node:76
+May 19 05:57:42.642 CRIT Failed to start beacon node, reason: Built-in genesis state SSZ bytes are invalid: OffsetSkipsVariableBytes(2736713), module: lighthouse:721
+May 19 05:57:42.642 INFO Internal shutdown received, reason: Failed to start beacon node, module: environment:470
+May 19 05:57:42.642 INFO Shutting down.., reason: Failure("Failed to start beacon node"), module: lighthouse:772
+May 19 06:56:28.530 INFO Logging to file, path: "./lighthouse_data/beacon/logs/beacon.log", module: environment:311
+May 19 06:56:28.533 INFO Lighthouse started, version: Lighthouse/v6.0.1, module: lighthouse:680
+May 19 06:56:28.533 INFO Configured for network, name: custom (./config), module: lighthouse:681
+May 19 06:56:28.541 INFO You are about to delete the chain database. This is irreversable and you will need to resync the chain., module: beacon_node::config:66
+May 19 06:56:28.541 INFO Type 'confirm' to delete the database. Any other input will leave the database intact and Lighthouse will exit., module: beacon_node::config:71
+May 19 06:56:33.667 INFO Database was deleted., module: beacon_node::config:83
+May 19 06:56:33.667 INFO Data directory initialised, datadir: ./lighthouse_data, module: beacon_node::config:107
+May 19 06:56:33.667 WARN Discv5 packet filter is disabled, module: beacon_node::config:1382
+May 19 06:56:33.679 INFO Deposit contract, address: 0x7f02c3e3c98b133055b8b348b2ac625669ed295d, deploy_block: 1, module: beacon_node::config:500
+May 19 06:56:33.687 WARN Fork boundaries are not well aligned / multiples of 256, misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))], info: This may cause issues as fork boundaries do not align with the start of sync committee period., module: beacon_node:76
+May 19 06:56:33.690 CRIT Failed to start beacon node, reason: Built-in genesis state SSZ bytes are invalid: OffsetSkipsVariableBytes(2736713), module: lighthouse:721
+May 19 06:56:33.690 INFO Internal shutdown received, reason: Failed to start beacon node, module: environment:470
+May 19 06:56:33.690 INFO Shutting down.., reason: Failure("Failed to start beacon node"), module: lighthouse:772

@@ -11,7 +11,13 @@
     "istanbulBlock": 0,
     "berlinBlock": 0,
     "londonBlock": 0,
-    "mergeForkBlock": 0
+    "mergeForkBlock": 0,
+    "shanghaiTime": 0,
+    "cancunTime": 0,
+    "pragueTime": 0,
+    "terminalTotalDifficulty": 0,
+    "terminalBlockHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "terminalBlockNumber": 0
   },
   "nonce": "0x0",
   "timestamp": "0x0",
@@ -24,5 +30,9 @@
     "0xE2b39f4cfFA5B17434e47Ab5F54b984155e4b7aD": {
       "balance": "0x8AC7230489E80000"
     }
-  }
+  },
+  "baseFeePerGas": "0x3b9aca00",
+  "excessBlobGas": "0x0",
+  "blobGasUsed": "0x0",
+  "parentBeaconBlockRoot": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
