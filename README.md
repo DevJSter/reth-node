@@ -1,7 +1,7 @@
 ## Initializing the db and stuff
 
 ```bash
-reth init --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --chain config.json
+  reth init --datadir "/Users/qoneqt/Desktop/shubham/rethnode/data" --chain config.json
 ```
 
 ## Running the node
@@ -40,7 +40,7 @@ curl -X POST http://localhost:8551 \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiAxNzQ3MDUwMjcxfQ.AZN-Qb1eQprecQPuJRsiCSnDYjVQmG1GLWDvaNdMBxw" \
   --data '{
     "jsonrpc":"2.0",
-    "method":"eth_blockNumber",
+    "method":"eth_chainId",
     "params":[],
     "id":1
   }' 
