@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories:
+      - '**/*'
+    schedule:
+      interval: daily
+    versioning-strategy: increase
+    ignore:
+      - dependency-name: '*'
+        update-types:
+          - 'version-update:semver-major'
