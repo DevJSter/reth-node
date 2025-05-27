@@ -194,7 +194,7 @@ function writeConfigs(argv: any) {
             },
         },
         "chain": {
-            "id": 412346,
+            "id": 202102,
             "info-files": [chainInfoFile],
         },
         "node": {
@@ -381,7 +381,7 @@ function writeConfigs(argv: any) {
 
 function writeL2ChainConfig(argv: any) {
     const l2ChainConfig = {
-        "chainId": 412346,
+        "chainId": 202102,
         "homesteadBlock": 0,
         "daoForkSupport": true,
         "eip150Block": 0,
