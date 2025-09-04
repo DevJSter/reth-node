@@ -47,11 +47,6 @@ commit_threshold = 100000
 [stages.etl]
 file_size = 524288000
 
-[prune]
-block_interval = 5
-
-[prune.segments.receipts_log_filter]
-
 [peers]
 refill_slots_interval = "5s"
 trusted_nodes = []
